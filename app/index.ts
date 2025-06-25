@@ -1,10 +1,8 @@
-import { z } from "zod";
-import { defineCommand } from "mcmd";
-
 export const options = z.object({
-    name: z.string()
+    name: z.string(),
 });
 
-export default defineCommand<typeof options>(({ name }) => {
-    console.log("Hi", name)
+export default Command((data) => {
+    const { name } = data;
+    Console.log("Hi", name);
 });

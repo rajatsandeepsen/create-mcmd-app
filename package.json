@@ -7,8 +7,9 @@
   "bin": "./dist/cli.js",
   "files": ["dist/**/*"],
   "scripts": {
-    "build": "bun run ./build.ts",
-    "cli": "bun run ./dist/cli.js"
+    "build": "mcmd build",
+    "transpile": "mcmd transpile",
+    "cli": "bun run ./.mcmd/cli.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -18,12 +19,13 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "mcmd": "0.0.8"
+    "mcmd": "0.0.92",
+    "zod": "^3.25.67"
   },
   "repository": {
     "directory": "/",
     "url": "https://github.com/rajatsandeepsen/create-mcmd-app",
     "type": "git"
-   },
-   "keywords": ["mcmd", "cli", "zod"]
+  },
+  "keywords": ["mcmd", "cli", "zod"]
 }
